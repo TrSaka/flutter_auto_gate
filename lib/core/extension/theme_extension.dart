@@ -1,0 +1,1 @@
+extension ThemeExtension on String {}

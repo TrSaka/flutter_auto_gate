@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "941075016085",
+    "project_id": "flutter-door",
+    "storage_bucket": "flutter-door.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941075016085:android:68d1b2f4f3ed68653eee9c",
+        "android_client_info": {
+          "package_name": "com.example.flutter_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941075016085-4bo8qfmfhm0c4rtk8h8pg0d7shj2hb4j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgwWbUVqJAOiO_GIG1AtHL4lwSVX4Gipk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941075016085-4bo8qfmfhm0c4rtk8h8pg0d7shj2hb4j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
