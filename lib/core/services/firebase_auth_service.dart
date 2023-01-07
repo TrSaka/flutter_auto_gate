@@ -28,8 +28,11 @@ class AuthRepository {
   Future<void> signOut() async {
     await _auth.signOut();
   }
+  Future<void>signOutWhenAppKilled()async{
+    
+  }
 
-  Future<User?> register(String email, String username, String password) async {
+  Future<User?> register(String name, String email, String password) async {
     try {
       final result = await _auth.createUserWithEmailAndPassword(
         email: email,

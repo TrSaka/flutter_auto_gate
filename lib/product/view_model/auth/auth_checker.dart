@@ -1,13 +1,15 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_system/core/init/provider/auth_provider.dart';
 import 'package:flutter_system/product/view/auth/login_view.dart';
-import 'package:flutter_system/product/view/auth/register_view.dart';
+import 'package:flutter_system/product/view/menu/home_menu_view.dart';
+import 'package:flutter_system/product/view/splash/splash_view.dart';
 
-class AuthChecker extends ConsumerWidget {
+class LoginAuthChecker extends ConsumerWidget {
   @override
-  const AuthChecker({Key? key}) : super(key: key);
-
+  const LoginAuthChecker({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final _authState = ref.watch(
@@ -15,13 +17,16 @@ class AuthChecker extends ConsumerWidget {
     return _authState.when(
       data: (user) {
         if (user != null) {
-          return const RegisterPageView();
+          debugPrint("User In !");
+          debugPrint("User :${user.email}");
+          return const SplashView();
         } else {
+          debugPrint("Please let user in");
           return const LoginPageView();
         }
       },
       error: (error, stackTrace) {
-        return Text("err");
+        return const Text("err");
       },
       loading: () {
         return const CircularProgressIndicator();

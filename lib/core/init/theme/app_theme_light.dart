@@ -8,7 +8,8 @@ import 'app_theme.dart';
 mixin AppThemeLight implements ThemeData {
   static ThemeData get theme => ThemeData(
         backgroundColor: UIColor().backgroundColor,
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
+          backgroundColor: UIColor().backgroundColor,
           elevation: 0,
           centerTitle: true,
         ),
