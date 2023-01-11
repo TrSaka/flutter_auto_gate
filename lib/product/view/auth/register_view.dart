@@ -94,7 +94,7 @@ class _RegisterPageViewState extends ConsumerState<RegisterPageView> {
                     event: () => ref
                         .read(viewModel.registerControllerProvider.notifier)
                         .register(
-                          "username controller.text here !",
+                          viewModel.nameController.text,
                           viewModel.emailController.text,
                           viewModel.passwordController.text,
                         )),

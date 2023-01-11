@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class HomeMenuView extends StatefulWidget {
@@ -19,7 +18,7 @@ class _HomeMenuViewState extends State<HomeMenuView> {
           onPressed: () {
             FirebaseAuth.instance.signOut();
           },
-          child: Text("Sign Out"),
+          child: const Text("Sign Out"),
         ),
       ),
     );

@@ -1,15 +1,11 @@
 // ignore_for_file: non_constant_identifier_names
-
 import 'dart:async';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_system/core/init/lang/locale_keys.g.dart';
 import 'package:flutter_system/core/extension/string_extension.dart';
 import '../../../core/init/provider/auth_provider.dart';
-import '../../routes/app_router.gr.dart';
-import '../../routes/route.dart';
 import 'login_state.dart';
 
 class LoginViewModel {
@@ -53,6 +49,7 @@ class LoginController extends StateNotifier<LoginState> {
             password,
             rememberMe,
           );
+          
       state = const LoginStateSuccess();
     } on FirebaseException catch (e) {
       state = LoginStateError(e.toString());
